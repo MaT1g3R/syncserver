@@ -15,6 +15,7 @@ RUN apk --no-cache update \
     && pip install --upgrade pip \
     && pip install --upgrade --no-cache-dir -r requirements.txt \
     && pip install --upgrade --no-cache-dir -r dev-requirements.txt \
+    && pip install --upgrade psycopg2 \
     && apk del g++
 
 COPY . /app
